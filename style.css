@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+  font-family: Arial;
+
+}
+
+.post{
+  /* manita en el post */
+  cursor: pointer;
+}
+.posts-imagenes{
+  /* figure tiene margen por default */
+  margin: 0;
+}
+.posts-imagenes{
+
+}

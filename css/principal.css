@@ -1,0 +1,94 @@
+body{
+  margin: 0;
+  font-family: Arial;
+
+}
+header{
+  background: black;
+  font-family: georgia;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+  align-items: flex-end;
+  text-decoration: none;
+}
+a{
+   color:white;
+   cursor: pointer;
+}
+.grilla1{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(100px,300px));
+  justify-content: space-around;
+}
+
+.post{
+  /* manita en el post */
+  cursor: pointer;
+  position: relative; /* para que el hover sea solo del post*/
+  display: block;
+
+}
+.post-imagenes{
+  /* figure tiene margen por default */
+  margin: 0;
+}
+.post-imagenes img{
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+
+}
+.post-overlay{
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.post:hover .post-overlay{
+  display: flex;
+}
+
+.post-likes,
+.post-comments{
+  width: 80px;
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+/* grilla */
+.post-list{
+    /*1. grid
+      2. columnas
+      3. filas  */
+  display: grid;
+  grid-template-columns: repeat(3,minmax(100px, 293px));
+
+  /*  centrar contenido*/
+  justify-content: center;
+  /* separacion entre objetos = gap */
+ grid-gap: 28px;
+
+}
+/*condicion menor a tablet ipad  */
+@media screen and (max-width: 768px) {
+  .post-list{
+    grid-gap: 3px;
+  }
+  .grilla1{
+    font-size: 10px;
+  }
+
+}
